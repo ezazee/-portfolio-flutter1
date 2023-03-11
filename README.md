@@ -10,7 +10,7 @@
     <a href="#" target="_blank"> <img src="https://img.icons8.com/color/48/000000/figma--v1.png"/> </a>
     <br />
     <br />
-    <b>Note:</b> Akan Update Secara Berkala Seiring Berjalannya Projek, dan prokel ini belum integrasi dengan BE
+    <b>Note:</b> Akan Update Secara Berkala Seiring Berjalannya Projek, dan projek ini belum integrasi dengan BE
 </p>
 
 ## Tentang Project
