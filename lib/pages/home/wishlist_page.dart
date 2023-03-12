@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/theme.dart';
 
+import '../../widgets/wishlist_card.dart';
+
 class WishListPage extends StatelessWidget {
   const WishListPage({super.key});
 
@@ -45,10 +47,27 @@ class WishListPage extends StatelessWidget {
                 style: secondaryTextStyle,
               ),
               SizedBox(height: 20,),
-              TextButton(
-                onPressed: (){},
-                child: Text(
-                  'Cari Barang'
+              Container(
+                height: 44,
+                child: TextButton(
+                  onPressed: (){},
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 24
+                    ),
+                    backgroundColor: primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12)
+                    )
+                  ),
+                  child: Text(
+                    'Cari Barang',
+                    style: primaryTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: medium
+                    ),
+                  ),
                 ),
               )
             ],
@@ -57,11 +76,29 @@ class WishListPage extends StatelessWidget {
       );
     }
 
+    Widget content(){
+      return Expanded(
+        child: Container(
+          color: backgroundColor1,
+          child: ListView(
+            padding: EdgeInsets.symmetric(
+              horizontal: defaultMargin,
+            ),
+            children: [
+              WishListCard(),
+              WishListCard(),
+              WishListCard(),
+            ],
+          ),
+        ),
+      );
+    }
 
     return Column(
       children: [
         header(),
-        emptyWishList(),
+        // emptyWishList(),
+        content(),
       ],
     );
   }
